@@ -1,7 +1,8 @@
-<a href="https://ibb.co/4R1ZSH1t"><img src="https://i.ibb.co/4R1ZSH1t/SCR-20251205-sysr.jpg" alt="SCR-20251205-sysr" border="0"></a>
+
+<img src="https://i.ibb.co/4R1ZSH1t/SCR-20251205-sysr.jpg" width="100%">
 ---
 
-# 繪初 DrawOrigin ｜插畫教學品牌網站
+## 繪初 DrawOrigin ｜插畫教學品牌網站
 
 這是一個我在學習 Laravel 時製作的多頁式網站專案，主要目的是練習 MVC 架構、Blade 模板、前後端整合，以及了解 Laravel 專案的基本運作方式。
 專案裡面包含前台頁面切版、簡單的資料模型，以及基本的 Controller 與路由設定。
