@@ -1,10 +1,7 @@
-下面是 **可以直接貼進 README.md 的 Markdown 語法版本**，包含你要求的 **「未來可以優化的方向」**，語氣維持「新手但有在學習」的自然風格，不會太專業、也不會太 AI。
-
-我已經幫你排版、上標題、加 code block，你可以整段複製貼上。
-
+<a href="https://ibb.co/4R1ZSH1t"><img src="https://i.ibb.co/4R1ZSH1t/SCR-20251205-sysr.jpg" alt="SCR-20251205-sysr" border="0"></a>
 ---
 
-# DrawOrigin
+# 繪初 DrawOrigin ｜插畫教學品牌網站
 
 這是一個我在學習 Laravel 時製作的多頁式網站專案，主要目的是練習 MVC 架構、Blade 模板、前後端整合，以及了解 Laravel 專案的基本運作方式。
 專案裡面包含前台頁面切版、簡單的資料模型，以及基本的 Controller 與路由設定。
@@ -117,7 +114,13 @@ php artisan serve
 
 這些都是我下一步會持續練習與補強的部分。
 
----
+
+⸻
+
+
+👉 [專題簡報連結](https://docs.google.com/presentation/d/1Lpqgs3bcIqKAbA8s-pbgnELtAQdbmT_tH5S-UMGR6IY/edit?usp=drive_link)
+
+
 ⸻
 
 ✍️ 作者（Author）
