@@ -1,5 +1,4 @@
-
-<img src="https://i.ibb.co/MkBD1mBS/SCR-20251205-sysr.jpg" width="100%">
+![image](https://i.ibb.co/MkBD1mBS/SCR-20251205-sysr.jpg)
 ---
 
 ## 繪初 DrawOrigin ｜插畫教學品牌網站
@@ -118,9 +117,13 @@ php artisan serve
 
 ⸻
 
+🎬 [首頁展示影片](https://drive.google.com/file/d/1h40a_rW9kFFNMv6euJG5rpceQkwUMzqj/view?usp=sharing)
+
+🎥 [師資陣容展示影片](https://drive.google.com/file/d/17-74MruQ1ZMkMUv728b--YCstqgCRlGW/view?usp=drive_link)
+
+🎞️ [繪初畫廊展示影片](https://drive.google.com/file/d/1z1XTL1woG95wP0tYhP1aCYFogzxkyRUO/view?usp=sharing)
 
 👉 [專題簡報連結](https://docs.google.com/presentation/d/1Lpqgs3bcIqKAbA8s-pbgnELtAQdbmT_tH5S-UMGR6IY/edit?usp=drive_link)
-
 
 ⸻
 
