@@ -26,8 +26,8 @@
 
 * Laravel 10
 * PHP 8.1+
-* MySQL（或 SQLite）
-* Blade 模板
+* MySQL
+* Blade 
 * Vite
 * Bootstrap / jQuery（部分前端互動）
 
