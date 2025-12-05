@@ -1,61 +1,129 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+下面是 **可以直接貼進 README.md 的 Markdown 語法版本**，包含你要求的 **「未來可以優化的方向」**，語氣維持「新手但有在學習」的自然風格，不會太專業、也不會太 AI。
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+我已經幫你排版、上標題、加 code block，你可以整段複製貼上。
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+# DrawOrigin
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+這是一個我在學習 Laravel 時製作的多頁式網站專案，主要目的是練習 MVC 架構、Blade 模板、前後端整合，以及了解 Laravel 專案的基本運作方式。
+專案裡面包含前台頁面切版、簡單的資料模型，以及基本的 Controller 與路由設定。
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 專案內容簡介
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+這個專案主要包含：
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+* 多個前台頁面（首頁、商品頁、課程頁、聯絡頁等）
+* Blade 模板拆分（layout、header、footer）
+* 基本的 Controller 和 Route 設定
+* 使用 Vite 編譯前端資源（CSS / JS）
+* Model 只是用來示範資料結構（例如商品、購物車等）
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+專案目前沒有串接金流或完整會員系統，主要是練習架構與頁面切版。
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 使用的技術
 
-### Premium Partners
+* Laravel 10
+* PHP 8.1+
+* MySQL（或 SQLite）
+* Blade 模板
+* Vite
+* Bootstrap / jQuery（部分前端互動）
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+---
 
-## Contributing
+## 專案資料夾大致說明
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```
+resources/views/front/    前台所有頁面
+resources/views/layout/   共用的版型
+app/Http/Controllers/     控制器
+app/Models/               示範用資料模型
+routes/web.php            路由設定
+public/front/             圖片、CSS、JS
+```
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 本地端執行方式
 
-## Security Vulnerabilities
+### 下載專案
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```bash
+git clone https://github.com/aitong0113/draworigin
+cd draworigin
+```
 
-## License
+### 安裝 PHP 套件
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```bash
+composer install
+```
+
+### 安裝前端套件
+
+```bash
+npm install
+```
+
+### 建立環境設定並產生金鑰
+
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+
+### （可選）建立資料表
+
+```bash
+php artisan migrate
+```
+
+### 啟動本地伺服器
+
+```bash
+php artisan serve
+```
+
+---
+
+## 這個專案對我來說的練習重點
+
+* 練習了解 Laravel 的 MVC 架構
+* 熟悉 Blade 模板如何拆分、繼承與引用
+* 實際操作 routes / controllers 的流程
+* 使用 Vite 管理前端資源
+* 觀察頁面結構並思考哪些部分可以做成共用 layout
+
+這個專案目前不是完整的商業系統，而是我學習 Laravel 過程中的示範作品，用來理解各部分如何串起來。
+
+---
+
+## 未來可以優化的方向
+
+雖然目前專案以練習為主，但如果要讓它更完整，之後可以加入：
+
+* 會員登入 / 註冊功能（含 Session 與驗證流程）
+* 商品資料改由資料庫管理，而不是寫死在前端或 Model 裡
+* 完整的購物流程（加入購物車、結帳頁、訂單紀錄）
+* 後台介面（商品管理、訂單管理）
+* API 版本（讓前後端分離也能使用）
+* Blade 元件化（例如把 header、footer、card 做成 component）
+* 更清楚的資料夾結構與命名規則
+
+這些都是我下一步會持續練習與補強的部分。
+
+---
+⸻
+
+✍️ 作者（Author）
+
+Abbie Lin ｜ Frontend & UI/UX Designer
+
+跨心理 × 設計 × 前端的創作者。
+
+💌 GitHub: https://github.com/aitong0113
