@@ -1,0 +1,85 @@
+.sidebar {
+    float: left;
+    width: 100%;
+}
+.classbar{
+    display: none;    
+}
+.secondary {
+    margin-left: 1em;
+    border-bottom: #eee 1px solid;
+}
+
+.secondary p::before {
+    content: url(../img/image.png);
+}
+
+.minor {
+    margin-left: 2em;
+}
+
+.minor p::before {
+    content: url(../img/circle.png);
+}
+
+
+
+/*filterbar 側篩選*/
+.filterbar {
+    display: inline-block;
+    border: 1px #ddd solid;
+    margin-top: -40px;
+    margin-bottom: 50px;
+    width: 100%; 
+}
+.filterbar h5{
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 20px 25px 10px;
+    margin-bottom: 0;
+}
+
+.filterbar .btn{
+    width: auto;
+    text-align: left;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    line-height: 2rem;
+    padding: 10px 25px;
+}
+.filterbar .btn:hover{
+    background-color: #eee;
+}
+.filterbar .btn .choose{
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+
+@media only screen and (min-width: 481px) {
+
+}
+
+
+
+@media only screen and (min-width: 1025px) {
+.sidebar {
+    width: 260px;
+}
+.classbar{
+    display: block;
+}
+
+/*filterbar 側篩選*/
+.filterbar{
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 0px;
+}
+.filterbar .btn{
+    width: 100%;
+}
+
+}

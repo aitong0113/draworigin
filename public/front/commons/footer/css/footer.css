@@ -1,0 +1,114 @@
+.footer{
+	width: 100%;
+	height: auto;
+	float: left;
+    padding: 100px 15px;
+	background-color: #ddd;
+	letter-spacing: 1px;
+	font-size: 1rem;
+}
+.footer_l{
+	width: 100%;
+	float: left;
+	text-align: center;
+}
+.footer_r{
+	width: 100%;
+	float: left;
+	text-align: center;
+}
+
+
+.footer ul{
+	padding: 0;
+    margin-top: 30px;
+	line-height: 34px;
+}
+
+.footer ul li{
+	list-style: none;
+}
+.f_logo{
+    margin-bottom: 30px;
+}
+.f_logo img{
+	width: 180px;
+}
+
+.footer .f_nav{
+	display: none;
+}
+
+
+.footer .icon li{
+	display: inline;
+	padding: 5px;
+}
+
+.footer .icon li:nth-last-child(1){
+	padding-right: 0px;
+}
+.footer .icon li img{
+	width: 40px;
+	margin-bottom: 20px;
+}
+
+.footer .copyright ,.footer .copyright a{
+	font-size:0.75rem;
+	color: #aaa;
+    margin-top: 70px;
+    letter-spacing: 0px;
+}
+
+
+@media only screen and (min-width: 481px) {
+.footer{
+	font-size: 1rem;
+}
+.footer .copyright ,.footer .copyright a{
+	font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+}
+
+
+
+@media only screen and (min-width: 1200px) {
+.footer{
+    padding: 100px 10%;
+}
+.footer ul{
+    margin-top: 0px;
+}
+
+.footer_l{
+	width: 40%;
+	float: left;
+	text-align: left;
+}
+.footer_r{
+	width: 60%;
+	float: right;
+	text-align: right;
+}
+.footer .f_nav{
+	margin-bottom: 30px;
+	display: block;
+}
+
+
+.footer .f_nav li{
+	display: inline;
+	padding: 0px 20px;
+	font-size: 1.1rem;
+}
+
+
+.footer .f_nav li:nth-last-child(1){
+	padding-right: 0px;
+}
+.footer .icon li img{
+	width: 30px;
+}
+}
+

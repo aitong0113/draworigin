@@ -1,0 +1,264 @@
+/*tab*/
+.tab {
+    overflow: hidden;
+    /*border-bottom: 1px solid #ccc;*/
+    background-color: transparent;
+    float: left;
+    width: 100%;
+    margin-bottom: 30px;
+    margin-top: 80px;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 50%;
+    padding: 15px 0;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    border: 1px solid #ccc;
+    border-top: 2px solid #ccc;
+    border-bottom: none;
+    color: #bbb;
+    transition: 0.5s;
+    background-color: #f5f5f5;
+}
+
+.tab button:nth-child(2) {
+    border-left: none;
+}
+
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    color: #666;
+    border-top: #666 2px solid;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    color: #333;
+    border-top: #333 2px solid;
+    background-color: transparent;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    border-top: none;
+}
+
+/* Fade in Tabs*/
+.tabcontent {
+    animation: fadeEffect 1s;
+    /* Fading effect takes 1 second */
+    letter-spacing: 1px;
+    float: left;
+    width: 100%;
+}
+
+.terms .tabcontent h3 {
+    padding: 40px 0 20px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/*table*/
+.tabcontent .tableBox {
+    width: 100%;
+    border: #aaa 1px solid;
+    table-layout: fixed;
+    margin: 20px 0;
+}
+
+.tabcontent .tableBox caption {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #000;
+    line-height: 46px;
+}
+
+.tabcontent .tableBox th,
+.tabcontent .tableBox td {
+    font-size: 1rem;
+    padding: 10px 1%;
+    border: 1px #bbb solid;
+    text-align: center;
+}
+
+.tabcontent .tableBox th {
+    color: #000;
+    background-color: #eee;
+    font-weight: normal;
+}
+
+
+/*圖文影音*/
+.page {
+    width: 90%;
+    float: left;
+    padding: 30px 0 50px;
+    
+}
+
+
+.info {
+    float: left;
+    width: 90%;
+    padding: 20px 0;
+    letter-spacing: 2px;
+}
+
+.info_left,
+.info_right {
+    float: left;
+    width: 90%;
+    padding: 20px 0;
+    letter-spacing: 2px;
+}
+
+.row_flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info p {
+    font-size: 0.9rem;
+    line-height: 24px;
+}
+
+.info_left p,
+.info_right p {
+    font-size: 0.9rem;
+    line-height: 24px;
+    padding: 20px 0px;
+}
+
+.info img {
+    width: 90%;
+}
+
+.info_left img,
+.info_right img {
+    width: 90%;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+    padding: 0;
+}
+
+.page .row {
+    margin: 0;
+    float: left;
+}
+
+.info_left .title,
+.info_right .title {
+    font-size: 1.4rem;
+}
+
+@media only screen and (min-width: 481px) {
+
+    /*tab*/
+    .tab button {
+        width: 33.333%;
+    }
+
+    /*圖文影音*/
+    .info,
+    .info_left,
+    .info_right {
+        float: left;
+        width: 90%;
+        letter-spacing: 2px;
+        justify-content: center;
+    }
+
+    .info p,
+    .info_left p,
+    .info_right p {
+        font-size: 1.1rem;
+        line-height: 36px;
+        padding: 20px 0;
+    }
+
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    /*tab*/
+    .tab button {
+        width: 20%;
+    }
+
+    /*圖文影音*/
+    .info {
+        float: left;
+        padding: 20px 0;
+        letter-spacing: 2px;
+    }
+
+    .info_left {
+        float: left;
+        width: 50%;
+        padding: 0;
+        letter-spacing: 2px;
+    }
+
+    .info_right {
+        float: left;
+        width: 50%;
+        padding: 0;
+        letter-spacing: 2px;
+    }
+
+    .info_left .title,
+    .info_right .title {
+        font-size: 1.6rem;
+    }
+
+    .info_left p {
+        padding: 20% 80px 20% 0px;
+    }
+
+    .info_right p {
+        padding: 20% 0px 20% 80px;
+    }
+
+    .row_flex {
+        display: inline-block;
+    }
+}
+
+
+
+/* --- 覆蓋：讓 .tab 的按鈕置中 --- */
+.content>.tab {
+    display: flex;
+    justify-content: center;
+    /* 水平置中 */
+    align-items: center;
+    flex-wrap: wrap;
+    /* 窄螢幕自動換行 */
+}
+
+
+

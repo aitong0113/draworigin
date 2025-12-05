@@ -1,0 +1,282 @@
+/* ============================================================
+  GLOBAL
+============================================================ */
+
+.effects .img {
+  position: relative;
+  float: left;
+  margin-bottom: 15px;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+
+
+.effects .img img {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+a.close-overlay {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 45px;
+  text-align: center;
+  background-color: #000;
+  cursor: pointer;
+}
+a.close-overlay.hidden {
+  display: none;
+}
+
+p.expand {
+  display: block;
+  position: absolute;
+  z-index: 100;
+  text-align: center;
+  color: #fff;
+  line-height: 50px;
+  font-size: 30px;
+}
+p.expand i{
+  font-size: 30px;
+}
+
+/* ============================================================
+  EFFECT 6 - ICON BOUNCE IN
+============================================================ */
+#effect-6 .overlay {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+}
+#effect-6 .overlay p.expand {
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0 auto;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+#effect-6 .item.hover .overlay {
+  opacity: 1;
+}
+#effect-6 .item.hover .overlay p.expand {
+  top: 47%;
+  opacity: 1;
+}
+
+
+#effect-6 .item .info {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+#effect-6 .item.hover .info {
+  color: #000;
+}
+#effect-6 .item .add_cart select{
+  margin-bottom: 10px;
+}
+
+#effect-6 .item .qty{
+    width: 33.33%;
+    background-color: #fff;
+    border: rgb(169, 169, 169) 1px solid;    
+    padding: 10px 0;
+    white-space:nowrap;
+}
+#effect-6 .item .qty .minus,#effect-6 .item .qty .add{
+    cursor: pointer;
+}
+
+#effect-6 .item .bt{
+    display: inline-block;
+    padding: 5px 15px;
+
+}
+#effect-6 .item .num{
+    cursor: context-menu;
+}
+
+#effect-6 .item .minus{
+  border-right: #aaa 1px solid; 
+}
+#effect-6 .item .add{
+  border-left: #aaa 1px solid; 
+}
+
+#effect-6 .item .img .add_cart{
+  font-family: '微軟正黑體','Open Sans',sans-serif;
+  z-index: 999;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  bottom: -150px;
+  -webkit-transform: translate(-50%, 0%);
+  -moz-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  -o-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+}
+#effect-6 .item.hover .img .add_cart{
+  display: none;
+  opacity: 1;
+  bottom: 0px;
+}
+#effect-6 .item .img .add_cart .add_btn{
+  width: 100.5%;
+  height: 60px;
+  margin: 20px 0 0 -1px;
+  border: #fff;
+  background-color: #fff;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;  
+}
+#effect-6 .item .img .add_cart .add_btn:hover{
+  color: #999;
+}
+
+@media only screen and (min-width: 481px) {
+/*col-3*/
+  .effects .col-3:nth-child(n) {
+    margin-right: 30px;
+  }
+  .effects .col-3:nth-child(2n) {
+    margin-right: -30px;
+  }
+  .effects .col-3:nth-child(2n-1) {
+    margin-left: -30px;
+  }
+/*col-4*/
+  .effects .col-4:nth-child(n) {
+    margin-right: 30px;
+  }
+  .effects .col-4:nth-child(2n) {
+    margin-right: -30px;
+  }
+  .effects .col-4:nth-child(2n-1) {
+    margin-left: -30px;
+  }
+
+
+}
+
+@media only screen and (min-width: 1025px) {
+  #effect-6 .item.hover .img .add_cart{
+  display: inline-block;
+}
+/*col-4*/
+  .effects .col-4:nth-child(2n) {
+    margin-right: 0px;
+  }
+  .effects .col-4:nth-child(2n-1) {
+    margin-left: 0px;
+  }
+  .effects .col-4:nth-child(n) {
+    margin-right: 35px;
+  }
+  .effects .col-4:nth-child(3n) {
+    margin-right: -30px;
+  }
+  .effects .col-4:nth-child(3n-2) {
+    margin-left: 0px;
+  }
+
+
+#effect-6 .item.hover .overlay p.expand {
+  opacity: 0;
+}
+}
+
+@media only screen and (min-width: 1400px) {
+
+/*col-3*/
+  .effects .col-3:nth-child(2n) {
+    margin-right: 0;
+  }
+  .effects .col-3:nth-child(2n-1) {
+    margin-left: 0;
+  }
+
+  .effects .col-3:nth-child(n) {
+    margin-right: 30px;
+  }
+  .effects .col-3:nth-child(3n) {
+    margin-right: -30px;
+  }
+  .effects .col-3:nth-child(3n-2) {
+    margin-left: -30px;
+  }
+
+/*col-4*/
+
+  .effects .col-4:nth-child(3n) {
+    margin-right: 0px;
+  }
+  .effects .col-4:nth-child(3n-2) {
+    margin-left: 0px;
+  }
+
+  .effects .col-4:nth-child(n) {
+    margin-right: 27px;
+  }
+  .effects .col-4:nth-child(4n) {
+    margin-right: -30px;
+  }
+  .effects .col-4:nth-child(4n-3) {
+    margin-left: 0px;
+  }
+
+}
+
+
+@media only screen and (min-width: 1600px) {
+#effect-6 .item.hover .overlay p.expand {
+  opacity: 1;
+  top: 25%;
+}
+}
+
+@media only screen and (min-width: 1700px) {
+#effect-6 .item.hover .overlay p.expand {
+  top: 30%;
+}
+}

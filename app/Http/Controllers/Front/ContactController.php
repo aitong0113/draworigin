@@ -1,0 +1,15 @@
+<?php
+
+namespace App\Http\Controllers\Front;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+
+class ContactController extends Controller
+{
+    // 列表頁
+    public function list()
+    {
+        return view("front.contact.list");
+    }
+}

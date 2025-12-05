@@ -1,0 +1,206 @@
+/* =======================
+   Tab 樣式
+======================= */
+.tab {
+    overflow: hidden;
+    background-color: transparent;
+    width: 100%;
+    margin: 80px auto 30px auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tab button {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-top: 2px solid #ccc;
+    border-bottom: none;
+    cursor: pointer;
+    width: 50%;
+    padding: 15px 0;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: #bbb;
+    transition: 0.5s;
+}
+
+.tab button:nth-child(2) {
+    border-left: none;
+}
+
+.tab button:hover {
+    color: #666;
+    border-top: #666 2px solid;
+}
+
+.tab button.active {
+    color: #333;
+    border-top: #333 2px solid;
+    background-color: transparent;
+}
+
+.tabcontent {
+    display: none;
+    width: 100%;
+    animation: fadeEffect 1s;
+    letter-spacing: 1px;
+}
+
+.terms .tabcontent h3 {
+    padding: 40px 0 20px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* =======================
+   Table 樣式
+======================= */
+.tabcontent .tableBox {
+    width: 100%;
+    border: #aaa 1px solid;
+    table-layout: fixed;
+    margin: 20px 0;
+}
+
+.tabcontent .tableBox caption {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #000;
+    line-height: 46px;
+}
+
+.tabcontent .tableBox th,
+.tabcontent .tableBox td {
+    font-size: 1rem;
+    padding: 10px 1%;
+    border: 1px #bbb solid;
+    text-align: center;
+}
+
+.tabcontent .tableBox th {
+    color: #000;
+    background-color: #eee;
+    font-weight: normal;
+}
+
+/* =======================
+   Page 主要內容區塊
+======================= */
+.page {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 30px 0 50px;
+}
+
+/* 每個 row 內容塊 */
+.page .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+/* 左右區塊 */
+.info_left,
+.info_right {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.info_left img,
+.info_right img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* 單獨 info 區塊 */
+.info {
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px 0;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.info img {
+    max-width: 90%;
+    height: auto;
+}
+
+.info p,
+.info_left p,
+.info_right p {
+    font-size: 1rem;
+    line-height: 28px;
+    padding: 20px 0;
+}
+
+/* =======================
+   RWD 手機版調整
+======================= */
+@media screen and (max-width: 768px) {
+
+    .info_left,
+    .info_right {
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .info_left p,
+    .info_right p {
+        padding: 10px 0;
+    }
+
+    .tab button {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .tab button {
+        width: 20%;
+    }
+
+    .info_left p {
+        padding: 20% 80px 20% 0px;
+    }
+
+    .info_right p {
+        padding: 20% 0px 20% 80px;
+    }
+}
+
+
+
+/* 修正產品標題換行問題 */
+.content .product_header h2,
+.content .product_header .fw-bold {
+    white-space: normal !important;
+    /* 允許換行 */
+    word-break: keep-all !important;
+    /* 中文保持整詞，不要一字一行 */
+    overflow-wrap: break-word !important;
+    /* 英文/數字太長才換行 */
+    line-height: 1.5 !important;
+    display: block !important;
+    max-width: 100%;
+}

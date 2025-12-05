@@ -1,0 +1,121 @@
+
+.product-list{
+	float: left;
+    width: 100%;
+    height: auto;
+    margin-left: 0px;
+}
+
+.product-list .item{
+	float: left;
+	width: 100%;
+	margin-bottom: 60px;
+}
+.product-list .col-3,.product-list .col-4{
+	width: 100%;
+}
+.product-list .item .info{
+	color: #666;
+	letter-spacing: 1px;
+}
+.product-list .item .info .num{
+	color: #aaa;
+	font-size: 0.8rem;
+}
+.product-list .item .info .main_title{
+	font-size: 1.2rem;
+    line-height: 2rem;
+}
+.product-list .item .info .sub_title{
+	font-size: 1rem;
+    line-height: 1.4rem;
+}
+.product-list .item .info .sale{
+	color: #ce0000;
+	font-size: 1.4rem;
+    line-height: 3rem;
+}
+.product-list .item .info .origin{
+	font-size: 0.8rem;
+	text-decoration:line-through;
+	margin-left: 10px;
+}
+
+
+.product-list .item .mark_act {
+    position: absolute;
+    width: 30%;
+    top: 20px;
+    left: 0px;
+}
+@media only screen and (min-width: 481px) {
+.product-list{
+    width: 100%;
+    margin-left: 0px;
+
+}
+.product-list .col-3,.product-list .col-4{
+	width: 50%;
+}
+
+}
+
+@media only screen and (min-width: 1025px) {
+.list-3{
+    width: calc(100% - 350px);
+    margin-left: 90px;
+
+}
+.product-list .col-4{
+	width: 31.2%;	
+}
+}
+
+@media only screen and (min-width: 1400px) {
+/*col-3*/
+.product-list .col-3{
+	width: 33.33%;
+}
+.list-3{
+    width: calc(100% - 350px);
+    margin-left: 60px;
+
+}
+
+
+.product-list .col-4{
+	width: 23.5%;
+}
+ /*.product-list{
+	width: calc(100% - 360px);
+    margin-left: 60px;
+
+}
+
+   width: calc(100% - 350px);
+    margin-left: 50px;*/
+}
+
+.item.col-3 {
+	width: auto !important;
+	float: none !important;
+}
+
+
+.product-list .item .img {
+	position: relative;
+	width: 100%;
+	padding-top: 150%;
+	/* 1:1 正方形，如果想 4:3 可以用 75% */
+	overflow: hidden;
+}
+
+.product-list .item .img img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	/* 保持比例裁切，避免壓扁 */
+}

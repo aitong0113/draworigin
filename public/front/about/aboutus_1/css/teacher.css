@@ -1,0 +1,341 @@
+/* =============================
+   Tabs 樣式
+============================= */
+.teacher-page .teacher-tabs {
+  display: flex;
+  justify-content: center;
+  margin: 200px auto 30px;
+  gap: 10px;
+  position: relative;
+  width: 60%;
+  border-bottom: none;
+}
+
+.teacher-page .teacher-tabs::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #bebebe;
+  border-radius: 1px;
+}
+
+.teacher-page .tab-btn {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.teacher-page .tab-btn.active {
+  background: #e09f9f;
+  color: #fff;
+  border-color: #e09f9f;
+}
+
+/* Tab 切換內容 */
+.teacher-page .teacher-content {
+  display: none;
+  animation: fadeInContent 0.5s ease;
+}
+
+.teacher-page .teacher-content.active {
+  display: block;
+}
+
+@keyframes fadeInContent {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =============================
+   老師介紹區塊
+============================= */
+.teacher-page .teacher-section {
+  padding: 100px 0 80px;
+  background-color: #fff;
+}
+
+.teacher-page .teacher-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  gap: 50px;
+}
+
+.teacher-page .teacher-text {
+  flex: 1;
+}
+
+.teacher-page .teacher-text .maintitle {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.teacher-page .teacher-text p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #333;
+}
+
+.teacher-page .teacher-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.teacher-page .teacher-img img {
+  width: 400px;
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .teacher-page .teacher-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .teacher-page .teacher-img img {
+    width: 300px;
+  }
+}
+
+/* =============================
+   老師時間軸區塊
+============================= */
+.teacher-page .teacher-timeline {
+  --gap: 80px;
+  padding: 100px 50px 200px;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  background-color: #f7f7f7;
+}
+
+.teacher-page .teacher-timeline h1,
+.teacher-page .teacher-timeline h2 {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.teacher-page .teacher-timeline ul {
+  list-style: none;
+  margin: 50px 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.teacher-page .teacher-timeline ul::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  border-left: 1px dashed #e09f9f;
+  z-index: 0;
+}
+
+.teacher-page .teacher-timeline ul li {
+  position: relative;
+  flex-basis: 50%;
+  padding-bottom: 30px;
+  z-index: 1;
+}
+
+.teacher-page .teacher-timeline ul li:nth-child(odd) {
+  padding-right: var(--gap);
+  text-align: right;
+}
+
+.teacher-page .teacher-timeline ul li:nth-child(even) {
+  padding-left: var(--gap);
+  text-align: left;
+  transform: translateY(50%);
+}
+
+.teacher-page .teacher-timeline ul li::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: var(--gap);
+  border-top: 1px dashed #e09f9f;
+  z-index: 1;
+}
+
+.teacher-page .teacher-timeline ul li:nth-child(odd)::before {
+  right: 0;
+}
+
+.teacher-page .teacher-timeline ul li:nth-child(even)::before {
+  left: 0;
+}
+
+.teacher-page .teacher-timeline ul li a {
+  display: inline-block;
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: fadeIn 0.5s 0.5s forwards;
+  max-width: 300px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.teacher-page .teacher-timeline ul li .pic {
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.teacher-page .teacher-timeline ul li .pic img {
+  transition: transform 0.3s ease;
+  width: 100%;
+  display: block;
+}
+
+.teacher-page .teacher-timeline ul li a:hover .pic img {
+  transform: scale(1.1);
+}
+
+.teacher-page .teacher-timeline ul li .txt h3 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.teacher-page .teacher-timeline ul li .txt p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.teacher-page .teacher-timeline button {
+  display: block;
+  margin: 50px auto 0;
+  padding: 10px 40px;
+  color: #e09f9f;
+  font-weight: 900;
+  background-color: #fff;
+  border: 1px solid #e09f9f;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.5s, color 1s;
+}
+
+.teacher-page .teacher-timeline button:hover {
+  background-color: #e09f9f;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .teacher-page .teacher-timeline ul::after {
+    left: 8px;
+  }
+
+  .teacher-page .teacher-timeline ul li {
+    flex-basis: 100%;
+    padding: 0 0 40px 30px;
+    text-align: left;
+    transform: none;
+  }
+
+  .teacher-page .teacher-timeline ul li::before {
+    left: 8px;
+    width: 20px;
+  }
+
+  .teacher-page .teacher-timeline ul li a {
+    max-width: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+
+/* 老師作品展示區 */
+.teacher-page .teacher-works {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto 50px;
+  padding: 0 20px;
+}
+
+.teacher-page .teacher-works .work-item {
+  text-align: center;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.teacher-page .teacher-works .work-item:hover {
+  transform: translateY(-5px);
+}
+
+.teacher-page .teacher-works img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.teacher-page .teacher-works p {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* 更多紀錄：提高層級 + 開啟 pointer-events，確保可立即點擊 */
+.more-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 24px auto 0;
+  padding: 12px 28px;
+  background: #fff;
+  border: 2px solid #e8b8b8;
+  border-radius: 999px;
+  cursor: pointer;
+  position: relative;
+  z-index: 9999;
+  pointer-events: auto;
+}
+
+.more-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, .06);
+}
+
+.more-btn:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}

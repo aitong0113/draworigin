@@ -1,0 +1,35 @@
+body{
+    background-color: #fff;
+}
+
+.content{
+	float: left;
+	width: 100%;
+    padding: 150px 15px;
+}
+
+
+@media only screen and (min-width: 481px) {
+.content{
+    padding: 150px 30px;
+}
+.con_list{
+    padding: 150px 30px 150px 60px;
+}
+}
+
+@media only screen and (min-width: 1025px) {
+.content{
+    padding: 150px 30px;
+    margin-left: 0px;
+}
+}
+
+
+@media only screen and (min-width: 1400px) {
+.content{
+    padding: 150px 15%;
+    margin-left: 0px;
+}
+}
+
