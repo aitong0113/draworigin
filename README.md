@@ -114,7 +114,7 @@ cp .env.example .env
 php artisan key:generate
 ```
 
-### （可選）建立資料表
+### 匯入MySQL資料表
 
 ```bash
 php artisan migrate
