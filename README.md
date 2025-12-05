@@ -1,5 +1,5 @@
 
-<img src="https://i.ibb.co/4R1ZSH1t/SCR-20251205-sysr.jpg" width="100%">
+<img src="https://i.ibb.co/MkBD1mBS/SCR-20251205-sysr.jpg" width="100%">
 ---
 
 ## 繪初 DrawOrigin ｜插畫教學品牌網站
